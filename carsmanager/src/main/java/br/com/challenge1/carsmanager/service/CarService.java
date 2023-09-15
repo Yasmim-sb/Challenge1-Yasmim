@@ -1,6 +1,5 @@
 package br.com.challenge1.carsmanager.service;
 
-
 import br.com.challenge1.carsmanager.repository.CarRepository;
 import br.com.challenge1.carsmanager.entity.CarBrand;
 import br.com.challenge1.carsmanager.entity.Car;
@@ -49,5 +48,4 @@ public Car save(Car car) {
     public void findById(Long aLong) {
     }
 }
-
 
