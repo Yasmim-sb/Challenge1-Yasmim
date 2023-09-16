@@ -1,7 +1,10 @@
 package br.com.challenge1.carsmanager.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
 @Table(name= "cars")
@@ -10,7 +13,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Car {
+  public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,5 +33,5 @@ public class Car {
 
     public Car(long l, String model, String red, int fabricationYear, String brand) {
     }
-}
+ }
 
