@@ -21,14 +21,14 @@ public class Car {
     @Column(name = "color")
     private String color;
     @Column(name = "fabrication_Year")
-    private int fabricationYear;
+    private String fabricationYear;
 
     @NotNull
     @Enumerated(EnumType.STRING)
     private CarBrand brand;
 
 
-    public Car(long l, String model, String red, int fabricationYear, String brand) {
+    public Car(long l, String brand, String red, int fabricationYear, String model) {
     }
 }
 

@@ -3,6 +3,7 @@ package br.com.challenge1.carsmanager.service;
 import br.com.challenge1.carsmanager.entity.Car;
 import br.com.challenge1.carsmanager.entity.CarBrand;
 import br.com.challenge1.carsmanager.repository.CarRepository;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -24,9 +25,17 @@ import java.util.Optional;
         return optionalCar.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Car not found"));
     }
 
-    private boolean isValidBrand(CarBrand brand) {
-        return brand != null && EnumSet.of(CarBrand.FORD, CarBrand.BMW, CarBrand.VOLVO, CarBrand.CHEVROLET).contains(brand);
-    }
+//    private boolean isValidBrand(CarBrand brand) {
+//        return brand != null && EnumSet.of(CarBrand.FORD, CarBrand.BMW, CarBrand.VOLVO, CarBrand.CHEVROLET).contains(brand);
+//    }
+     public static CarBrand fromString(String cBrand){
+         for(CarBrand carBrand: CarBrand.values()){
+             if(carBrand.name().equalsIgnoreCase(cBrand)){
+                 return carBrand;
+             }
+         }
+         throw new IllegalArgumentException("Brand invalid: "+cBrand);
+     }
 
     public void findById(Long aLong) {
     }
