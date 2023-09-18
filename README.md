@@ -3,7 +3,8 @@
 > Status: finished ✅
 >
 > + Description :
-> This project is done with two endponts, a post that only receives 4 brands, they are: FORD, CHEVROLET, BMW, VOLVO and get that can capture cars directly from the database, by chassis ID.
+> + This project is done with two endponts, a post that only receives 4 brands, they are: FORD, CHEVROLET, BMW, VOLVO and get that can capture cars directly from the database, by chassis ID.
+> + nulls are not saved in the database !
 >
 
 > ### The fields used in the Entity class are:
