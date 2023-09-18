@@ -2,7 +2,7 @@ package br.com.challenge1.carsmanager.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.antlr.v4.runtime.misc.NotNull;
+
 
 @Table(name= "cars")
 @Entity
@@ -14,21 +14,17 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "chassi_id")
+    @Column(name = "chassi_id", nullable = false)
     private Long chassisId;
-    @Column(name = "model")
+    @Column(name = "model", nullable = false)
     private String model;
-    @Column(name = "color")
+    @Column(name = "color", nullable = false)
     private String color;
-    @Column(name = "fabrication_Year")
+    @Column(name = "fabrication_year", nullable = false)
     private String fabricationYear;
 
-    @NotNull
     @Enumerated(EnumType.STRING)
     private CarBrand brand;
 
-
-    public Car(long l, String brand, String red, int fabricationYear, String model) {
-    }
 }
 
