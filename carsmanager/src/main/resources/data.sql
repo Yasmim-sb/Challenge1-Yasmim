@@ -1,4 +1,5 @@
 insert into cars(chassi_id, brand, color, fabrication_year, model)
+
 values (1, 'Ford', 'Red', '2021', 'Mustang');
 
 insert into cars(chassi_id, brand, color, fabrication_year, model)

@@ -48,4 +48,3 @@ public class CarService {
         return brand != null && EnumSet.of(CarBrand.FORD, CarBrand.BMW, CarBrand.VOLVO, CarBrand.CHEVROLET).contains(brand);
     }
 }
-
